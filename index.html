@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BMW Sri Lanka — The Ultimate Driving Machine. Explore the complete range of BMW vehicles available in Sri Lanka." />
+  <title>BMW Sri Lanka — Sheer Driving Pleasure</title>
+
+  <!-- Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ── Navbar (inline for single-file simplicity; extract to SSI if needed) ── -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo" aria-label="BMW Home">
+        <span class="navbar__logo-text">BMW</span>
+      </a>
+      <nav class="navbar__nav" aria-label="Primary navigation">
+        <a href="models.html"  class="navbar__link hover-line">Models</a>
+        <a href="models.html"  class="navbar__link hover-line">Electric</a>
+        <a href="#services"    class="navbar__link hover-line">Services</a>
+        <a href="#discover"    class="navbar__link hover-line">Discover</a>
+        <a href="#contact"     class="navbar__link hover-line">Contact</a>
+      </nav>
+      <div class="flex-center gap-md">
+        <a href="#contact" class="navbar__cta">Test Drive</a>
+        <button class="navbar__hamburger" id="hamburgerBtn"
+          aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+    <div class="mobile-menu__drawer">
+      <div class="mobile-menu__head">
+        <span class="t-label">Navigation</span>
+        <button class="mobile-menu__close" id="menuCloseBtn">Close ✕</button>
+      </div>
+      <nav class="mobile-menu__links">
+        <div class="mobile-menu__item">
+          <a href="models.html" class="mobile-menu__link">Models</a>
+          <div class="mobile-menu__link-sub">Explore the range</div>
+        </div>
+        <div class="mobile-menu__item">
+          <a href="models.html" class="mobile-menu__link">Electric</a>
+          <div class="mobile-menu__link-sub">BMW i Series</div>
+        </div>
+        <div class="mobile-menu__item">
+          <a href="#services" class="mobile-menu__link">Services</a>
+          <div class="mobile-menu__link-sub">Aftersales & Care</div>
+        </div>
+        <div class="mobile-menu__item">
+          <a href="#contact" class="mobile-menu__link">Contact</a>
+          <div class="mobile-menu__link-sub">Get in touch</div>
+        </div>
+      </nav>
+      <div class="mobile-menu__foot">
+        <a href="#contact" class="btn btn--primary" style="width:100%;justify-content:center;">
+          Request Test Drive
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════
+       MAIN CONTENT
+       ════════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="hero" aria-label="Hero">
+
+      <!-- Slide backgrounds -->
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide active" data-index="0">
+          <img
+            src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1920&q=85"
+            alt="BMW i7 Exterior"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__slide" data-index="1">
+          <img
+            src="assets/images/BMW-X5.jpg"
+            alt="BMW X Series"
+          />
+        </div>
+        <div class="hero__slide" data-index="2">
+          <img
+            src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1920&q=85"
+            alt="BMW 5 Series"
+          />
+        </div>
+      </div>
+
+      <!-- Overlays -->
+      <div class="hero__overlay-r" aria-hidden="true"></div>
+      <div class="hero__overlay-b" aria-hidden="true"></div>
+
+      <!-- Content -->
+      <div class="hero__content">
+        <p class="t-eyebrow hero__eyebrow" id="heroEyebrow">The BMW i7</p>
+        <h1 class="t-display hero__title" id="heroTitle">Sheer<br>Driving<br>Pleasure</h1>
+        <p class="t-body hero__sub" id="heroSub">
+          The first fully electric BMW i7 Sedan — where cinematic luxury meets zero emissions performance.
+        </p>
+        <div class="hero__actions">
+          <a href="models.html" class="btn btn--primary">
+            Explore Models
+            <span class="btn__arrow" aria-hidden="true"></span>
+          </a>
+          <a href="vehicle-detail.html" class="btn btn--outline">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide indicators -->
+      <div class="hero__indicators" aria-label="Slide navigation">
+        <button class="hero__dot active" data-slide="0" aria-label="Slide 1">
+          <span class="hero__dot-fill"></span>
+        </button>
+        <button class="hero__dot" data-slide="1" aria-label="Slide 2">
+          <span class="hero__dot-fill"></span>
+        </button>
+        <button class="hero__dot" data-slide="2" aria-label="Slide 3">
+          <span class="hero__dot-fill"></span>
+        </button>
+      </div>
+
+      <!-- Slide counter -->
+      <div class="hero__counter" aria-hidden="true">
+        <span class="hero__counter-current" id="heroCounterCurrent">01</span>
+        <span class="hero__counter-line"></span>
+        <span class="hero__counter-total">03</span>
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="hero__scroll" aria-hidden="true">Scroll</div>
+
+    </section>
+    <!-- /hero -->
+
+    <!-- ════ REMAINING HOMEPAGE SECTIONS (to be generated next) ════ -->
+    <!-- Stats Bar, Featured Models, Brand Pillars,
+         Gallery, Electric CTA, Services, Footer -->
+    <!-- These will be added in the next step -->
+
+    <!-- ════════════════════════════════════════════════
+     PREMIUM STATS BAR
+     Add BELOW hero section inside <main>
+     ════════════════════════════════════════════════ -->
+
+<section class="stats-bar section reveal">
+  <div class="container">
+    <div class="stats-bar__grid">
+
+      <div class="stats-bar__item">
+        <h3 class="stats-bar__number">100+</h3>
+        <p class="stats-bar__label">Premium Vehicles</p>
+      </div>
+
+      <div class="stats-bar__item">
+        <h3 class="stats-bar__number">25</h3>
+        <p class="stats-bar__label">Years Legacy</p>
+      </div>
+
+      <div class="stats-bar__item">
+        <h3 class="stats-bar__number">BMW</h3>
+        <p class="stats-bar__label">Certified Excellence</p>
+      </div>
+
+      <div class="stats-bar__item">
+        <h3 class="stats-bar__number">i</h3>
+        <p class="stats-bar__label">Electric Future</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     FEATURED MODELS SECTION
+     ════════════════════════════════════════════════ -->
+
+<section class="featured-models section section--lg" id="models">
+
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="section-heading reveal">
+      <p class="section-heading__eyebrow t-eyebrow">
+        Featured Collection
+      </p>
+
+      <h2 class="section-heading__title t-headline">
+        Crafted For <br>Every Journey
+      </h2>
+
+      <p class="section-heading__sub">
+        Explore BMW's newest generation of electric innovation,
+        performance engineering, and cinematic luxury.
+      </p>
+    </div>
+
+    <!-- Vehicle Grid -->
+    <div class="grid-3 stagger-children">
+
+      <!-- Card 1 -->
+      <a href="vehicle.html" class="vehicle-card">
+
+        <div class="vehicle-card__image-wrap img-zoom-wrap">
+          <span class="vehicle-card__badge">Electric Luxury</span>
+
+          <img
+            src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=80"
+            alt="BMW i7"
+          />
+
+          <div class="vehicle-card__overlay"></div>
+
+          <div class="vehicle-card__arrow">
+            →
+          </div>
+        </div>
+
+        <div class="vehicle-card__info">
+          <p class="vehicle-card__category">BMW i Series</p>
+
+          <h3 class="vehicle-card__name">
+            BMW i7
+          </h3>
+
+          <p class="vehicle-card__price">
+            Fully Electric Executive Sedan
+          </p>
+
+          <div class="vehicle-card__cta">
+            Explore Model
+            <span class="vehicle-card__cta-line"></span>
+          </div>
+        </div>
+
+      </a>
+
+      <!-- Card 2 -->
+      <a href="vehicle.html" class="vehicle-card">
+
+        <div class="vehicle-card__image-wrap img-zoom-wrap">
+          <span class="vehicle-card__badge">Performance SUV</span>
+
+          <img
+            src="assets\images\BMW-XM.jpg"
+            alt="BMW XM"
+          />
+
+          <div class="vehicle-card__overlay"></div>
+
+          <div class="vehicle-card__arrow">
+            →
+          </div>
+        </div>
+
+        <div class="vehicle-card__info">
+          <p class="vehicle-card__category">BMW M</p>
+
+          <h3 class="vehicle-card__name">
+            BMW XM
+          </h3>
+
+          <p class="vehicle-card__price">
+            Electrified High-Performance SUV
+          </p>
+
+          <div class="vehicle-card__cta">
+            Explore Model
+            <span class="vehicle-card__cta-line"></span>
+          </div>
+        </div>
+
+      </a>
+
+      <!-- Card 3 -->
+      <a href="vehicle.html" class="vehicle-card">
+
+        <div class="vehicle-card__image-wrap img-zoom-wrap">
+          <span class="vehicle-card__badge">M Performance</span>
+
+          <img
+            src="assets\images\BMW-M4.jpg"
+            alt="BMW M4"
+          />
+
+          <div class="vehicle-card__overlay"></div>
+
+          <div class="vehicle-card__arrow">
+            →
+          </div>
+        </div>
+
+        <div class="vehicle-card__info">
+          <p class="vehicle-card__category">BMW M Series</p>
+
+          <h3 class="vehicle-card__name">
+            BMW M4 Competition
+          </h3>
+
+          <p class="vehicle-card__price">
+            Precision Track Engineering
+          </p>
+
+          <div class="vehicle-card__cta">
+            Explore Model
+            <span class="vehicle-card__cta-line"></span>
+          </div>
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════════════
+     ELECTRIC EXPERIENCE SECTION
+     ════════════════════════════════════════════════ -->
+
+<section class="electric-section section section--lg">
+
+  <div class="container">
+
+    <div class="electric-section__wrap reveal">
+
+      <div class="electric-section__image">
+
+        <img
+          src="assets\images\BMW-Electric.jpg"
+          alt="BMW Electric Vehicle"
+          class="img-cover"
+        />
+
+      </div>
+
+      <div class="electric-section__content">
+
+        <p class="t-eyebrow">
+          BMW i Vision
+        </p>
+
+        <h2 class="electric-section__title t-display">
+          Electrified <br>Luxury
+        </h2>
+
+        <p class="electric-section__text t-body">
+          Discover the next evolution of driving pleasure with BMW's
+          fully electric lineup engineered for cinematic comfort,
+          silent power, and intelligent mobility.
+        </p>
+
+        <div class="hero__actions">
+          <a href="models.html" class="btn btn--primary">
+            Discover Electric
+            <span class="btn__arrow"></span>
+          </a>
+
+          <a href="vehicle.html" class="btn btn--outline">
+            View i7
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════════════
+     BRAND PHILOSOPHY SPLIT SECTION
+     ════════════════════════════════════════════════ -->
+
+<section class="craftsmanship section section--lg">
+
+  <div class="container">
+
+    <div class="craftsmanship__grid split-layout">
+
+      <!-- Left -->
+      <div class="craftsmanship__content reveal--left reveal">
+
+        <p class="t-eyebrow">
+          Obsessive Precision
+        </p>
+
+        <h2 class="section-heading__title t-headline">
+          Crafted Beyond <br>The Machine
+        </h2>
+
+        <p class="t-body">
+          Every BMW is engineered as an experience —
+          where technology, luxury, and performance unite
+          through timeless craftsmanship and modern innovation.
+        </p>
+
+        <div style="margin-top:2rem;">
+          <a href="#" class="btn btn--ghost">
+            Discover Philosophy
+            <span class="btn__arrow"></span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div class="craftsmanship__image reveal--right reveal split-layout__image">
+
+        <img
+          src="assets\images\BMW-M5-touring.jpg"
+          alt="BMW Interior"
+          class="img-cover"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════════════
+     CINEMATIC GALLERY
+     ════════════════════════════════════════════════ -->
+
+<section class="gallery section section--lg">
+
+  <div class="container">
+
+    <div class="section-heading section-heading--center reveal">
+
+      <p class="section-heading__eyebrow t-eyebrow">
+        Cinematic Moments
+      </p>
+
+      <h2 class="section-heading__title t-headline">
+        Designed To <br>Be Experienced
+      </h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-grid__feature img-zoom-wrap reveal">
+        <img
+          src="assets\images\BMW-M3-competition.jpg"
+          alt="BMW Gallery"
+          class="img-cover"
+        />
+      </div>
+
+      <div class="img-zoom-wrap reveal reveal-delay-1">
+        <img
+          src="assets\images\BMW-M2-competition.jpg"
+          alt=""
+          class="img-cover"
+        />
+      </div>
+
+      <div class="img-zoom-wrap reveal reveal-delay-2">
+        <img
+          src="assets\images\BMW-Z4.jpg"
+          alt=""
+          class="img-cover"
+        />
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════════════
+     SERVICES SECTION
+     ════════════════════════════════════════════════ -->
+
+<section class="services section" id="services">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <p class="section-heading__eyebrow t-eyebrow">
+        BMW Services
+      </p>
+
+      <h2 class="section-heading__title t-headline">
+        Ownership <br>Elevated
+      </h2>
+    </div>
+
+    <div class="grid-3 stagger-children">
+
+      <div class="service-card">
+        <h3 class="service-card__title">
+          BMW Service Care
+        </h3>
+
+        <p class="service-card__text">
+          Premium maintenance and certified servicing tailored for BMW vehicles.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="service-card__title">
+          Connected Drive
+        </h3>
+
+        <p class="service-card__text">
+          Intelligent digital connectivity designed around modern mobility.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3 class="service-card__title">
+          Test Drive Experience
+        </h3>
+
+        <p class="service-card__text">
+          Experience the next generation of driving pleasure firsthand.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ════════════════════════════════════════════════
+     LUXURY FOOTER
+     ════════════════════════════════════════════════ -->
+
+<footer class="footer section">
+
+  <div class="container">
+
+    <div class="footer__grid">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+
+        <h2 class="footer__logo">
+          BMW
+        </h2>
+
+        <p class="footer__text">
+          The Ultimate Driving Machine.
+          Crafted for cinematic driving experiences in Sri Lanka.
+        </p>
+
+      </div>
+
+      <!-- Models -->
+      <div>
+        <h4 class="footer__heading">Models</h4>
+
+        <ul class="footer__links">
+          <li><a href="#">BMW i7</a></li>
+          <li><a href="#">BMW XM</a></li>
+          <li><a href="#">BMW M4</a></li>
+          <li><a href="#">BMW X7</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="footer__heading">Services</h4>
+
+        <ul class="footer__links">
+          <li><a href="#">Test Drive</a></li>
+          <li><a href="#">BMW Care</a></li>
+          <li><a href="#">Connected Drive</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+
+        <ul class="footer__links">
+          <li>Colombo, Sri Lanka</li>
+          <li>+94 XX XXX XXXX</li>
+          <li>info@bmw.lk</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 BMW Sri Lanka. All Rights Reserved.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

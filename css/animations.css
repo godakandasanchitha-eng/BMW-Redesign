@@ -1,0 +1,98 @@
+/* ============================================================
+   BMW.LK — ANIMATIONS
+   ============================================================ */
+
+/* ── Page load ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Line draw ── */
+@keyframes lineDraw {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+@keyframes lineDrawV {
+  from { height: 0; }
+  to   { height: 100%; }
+}
+
+/* ── Pulse dot ── */
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.5); opacity: 0.5; }
+}
+
+/* ── Number counter ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Hover line reveal ── */
+.hover-line {
+  position: relative;
+  display: inline-block;
+}
+.hover-line::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--c-blue);
+  transition: width var(--t-mid) var(--ease-luxury);
+}
+.hover-line:hover::after { width: 100%; }
+
+/* ── Border trace on hover ── */
+.border-trace {
+  position: relative;
+}
+.border-trace::before,
+.border-trace::after {
+  content: '';
+  position: absolute;
+  background: var(--c-blue);
+  transition: all var(--t-slow) var(--ease-luxury);
+}
+.border-trace::before {
+  top: 0; left: 0;
+  width: 0; height: 1px;
+}
+.border-trace::after {
+  bottom: 0; right: 0;
+  width: 0; height: 1px;
+}
+.border-trace:hover::before,
+.border-trace:hover::after { width: 100%; }
+
+/* ── Stagger children ── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.stagger-children.is-visible > *:nth-child(1) { animation: fadeUp 0.6s var(--ease-luxury) 0.05s forwards; }
+.stagger-children.is-visible > *:nth-child(2) { animation: fadeUp 0.6s var(--ease-luxury) 0.15s forwards; }
+.stagger-children.is-visible > *:nth-child(3) { animation: fadeUp 0.6s var(--ease-luxury) 0.25s forwards; }
+.stagger-children.is-visible > *:nth-child(4) { animation: fadeUp 0.6s var(--ease-luxury) 0.35s forwards; }
+.stagger-children.is-visible > *:nth-child(5) { animation: fadeUp 0.6s var(--ease-luxury) 0.45s forwards; }
+.stagger-children.is-visible > *:nth-child(6) { animation: fadeUp 0.6s var(--ease-luxury) 0.55s forwards; }

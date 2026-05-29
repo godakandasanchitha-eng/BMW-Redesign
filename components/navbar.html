@@ -1,0 +1,119 @@
+<!-- ============================================================
+     NAVBAR COMPONENT — include at top of every page
+     ============================================================ -->
+
+<!-- Grain texture overlay (fixed, covers all pages) -->
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ── Navbar ── -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="navbar__logo" aria-label="BMW Home">
+      <!-- If logo.svg exists in assets/icons/, swap src below -->
+      <span class="navbar__logo-text">BMW</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="navbar__nav" aria-label="Primary navigation">
+      <a href="models.html"  class="navbar__link hover-line">Models</a>
+      <a href="models.html?filter=electric" class="navbar__link hover-line">Electric</a>
+      <a href="#services"    class="navbar__link hover-line">Services</a>
+      <a href="#discover"    class="navbar__link hover-line">Discover</a>
+      <a href="#contact"     class="navbar__link hover-line">Contact</a>
+    </nav>
+
+    <!-- CTA + Hamburger -->
+    <div class="flex-center gap-md">
+      <a href="#contact" class="navbar__cta">Test Drive</a>
+      <button
+        class="navbar__hamburger"
+        id="hamburgerBtn"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ── Mobile Menu ── -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mobile-menu__backdrop" id="menuBackdrop"></div>
+  <div class="mobile-menu__drawer">
+
+    <!-- Head -->
+    <div class="mobile-menu__head">
+      <span class="t-label">Navigation</span>
+      <button class="mobile-menu__close" id="menuCloseBtn" aria-label="Close menu">
+        Close &nbsp;✕
+      </button>
+    </div>
+
+    <!-- Links -->
+    <nav class="mobile-menu__links">
+      <div class="mobile-menu__item">
+        <a href="models.html" class="mobile-menu__link">
+          Models
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+        <div class="mobile-menu__link-sub">Explore the range</div>
+      </div>
+      <div class="mobile-menu__item">
+        <a href="models.html?filter=electric" class="mobile-menu__link">
+          Electric
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+        <div class="mobile-menu__link-sub">BMW i Series</div>
+      </div>
+      <div class="mobile-menu__item">
+        <a href="#services" class="mobile-menu__link">
+          Services
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+        <div class="mobile-menu__link-sub">Aftersales & Care</div>
+      </div>
+      <div class="mobile-menu__item">
+        <a href="#discover" class="mobile-menu__link">
+          Discover
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+        <div class="mobile-menu__link-sub">Brand & Heritage</div>
+      </div>
+      <div class="mobile-menu__item">
+        <a href="#contact" class="mobile-menu__link">
+          Contact
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8h10M8 3l5 5-5 5" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        </a>
+        <div class="mobile-menu__link-sub">Get in touch</div>
+      </div>
+    </nav>
+
+    <!-- Foot CTA -->
+    <div class="mobile-menu__foot">
+      <a href="#contact" class="btn btn--primary" style="width:100%;justify-content:center;">
+        Request Test Drive
+      </a>
+      <p class="t-label" style="text-align:center;margin-top:1rem;color:var(--c-border-mid)">
+        BMW Sri Lanka
+      </p>
+    </div>
+
+  </div>
+</div>
